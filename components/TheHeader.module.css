@@ -19,3 +19,7 @@
 .logo.disabled {
     pointer-events: none;
 }
+
+.home.disabled {
+    pointer-events: none;
+}

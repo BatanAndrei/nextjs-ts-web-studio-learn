@@ -15,11 +15,15 @@ import 'normalize.css/normalize.css'; //убирает все стандартн
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <div className={style.container}>
-                    <TheHeader />
-                    <main className={style.main}>{children}</main>
-                    <TheFooter />
-                </div>
+                <html>
+                    <body>
+                        <div className={style.container}>
+                            <TheHeader />
+                            <main className={style.main}>{children}</main>
+                            <TheFooter />
+                        </div>
+                    </body>
+                </html>
             </>
         );
     }
