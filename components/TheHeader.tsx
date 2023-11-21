@@ -12,9 +12,10 @@ export default function TheHeader ()  {
     return (
         <header className={style.positionLink}>
             <Link href="/" className={clsx(style.logo, {[style.disabled]: pathname === "/"})}>WEBSTUDIO</Link>
-            <Link href="/" className={clsx(style.home, {[style.disabled]: pathname === "/"})}>Главная</Link>
-            <Link href="/blog">О компании</Link>
-            <Link href="/contacts">Контакты</Link>
+            <li className={style.decor}><Link href="/" className={clsx(style.home, {[style.disabled]: pathname === "/"})}>Главная</Link></li>
+            <li className={style.decor}><Link href="/blog">О компании</Link></li>
+            <li className={style.decor}><Link href="/portfolio">Портфолио</Link></li>
+            <li className={style.decor}><Link href="/contacts">Контакты</Link></li>
         </header>
     )
 }

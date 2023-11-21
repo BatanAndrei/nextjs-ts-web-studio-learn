@@ -23,3 +23,7 @@
 .home.disabled {
     pointer-events: none;
 }
+
+.decor {
+    list-style: none;
+}
