@@ -1,0 +1,21 @@
+.positionLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f1576b;
+    transition: opacity 0.5s;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.logo.disabled {
+    pointer-events: none;
+}
