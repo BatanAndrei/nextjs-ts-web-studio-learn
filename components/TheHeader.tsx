@@ -8,13 +8,13 @@ import { usePathname } from 'next/navigation'
 
 export default function TheHeader ()  {
     const pathname = usePathname()
-    console.log(pathname)
+    
     return (
         <header className={style.positionLink}>
             <Link href="/" className={clsx(style.logo, {[style.disabled]: pathname === "/"})}>WEBSTUDIO</Link>
-            <Link href="/" className={clsx(style.home, {[style.disabled]: pathname === "/"})}>Home</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
+            <Link href="/" className={clsx(style.home, {[style.disabled]: pathname === "/"})}>Главная</Link>
+            <Link href="/blog">О компании</Link>
+            <Link href="/contacts">Контакты</Link>
         </header>
     )
 }
