@@ -1,26 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PortfolioItem } from '../../types';
-
+import { PortfolioItem } from '@/app/types';
+import { getDetailPortfolio } from '@/app/actions/getDetailPortfolio';
 
 interface ItemProps {
     params: {
-        portfolioItem: PortfolioItem;
+        portfolioItem: number;
     }
     
 }
 
 
-export default function Item({ params }: ItemProps) {
+export default async function PortfolioItem( {params: {portfolioItem} }: ItemProps) {
+    const item = await getDetailPortfolio(portfolioItem);
+    console.log(item)
     
     return (
         <div>
-            <h1>Проект: {params.portfolioItem.title}</h1>
+            <h1>Проект: {item.title}</h1>
             <Image 
-                src={params.portfolioItem.url} 
+                src={item.url} 
                 width={400} 
                 height={400} 
-                alt={params.portfolioItem.title} />
+                alt={item.title} />
             <Link href="/portfolio">Назад к списку работ</Link>
         </div>
     )

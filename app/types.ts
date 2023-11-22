@@ -5,4 +5,3 @@ export interface PortfolioItem {
     thumbnailUrl: string;
 }
 
-export type ItemsByGroup = [string, PortfolioItem[]][];

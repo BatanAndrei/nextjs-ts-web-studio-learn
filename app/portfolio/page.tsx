@@ -1,41 +1,19 @@
 "use client"
 
-import { ItemsByGroup, PortfolioItem } from '../types';
+import { PortfolioItem } from '@/app/types';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import axios from 'axios';
 import { useRouter } from "next/navigation";
+import { getPortfolio } from '@/app/actions/getPortfolio';
 
-export default function Portfolio() {
+export default async function Portfolio() {
 
     const [loading, setLoading] = useState(true);
     const [itemsByGroup, setItems] = useState<PortfolioItem[] | null>(null);
     const { push } = useRouter();
 
-    const PHOTOS_API_URL = 'https://jsonplaceholder.typicode.com/photos/';
-
-    //const prepareData = (data) => data; 
-    
-    /* const load = async () => {
-        try {
-            const { data } = await axios.get<PortfolioItem[]>(PHOTOS_API_URL);
-            const prepared = prepareData(data.slice(0, 7));
-            setItems(prepared);
-            console.log(prepared)
-        } catch (e) {
-            console.log(e);
-        } finally {
-            setLoading(false);
-        }
-    }; */
-
-    async function getData() {
-        const res = await fetch(PHOTOS_API_URL);
-        return res.json();
-        }
-    
         async function Page() {
-        const data = await getData();
+        const data = await getPortfolio();
         setItems(data.slice(0, 7));
         }
         
