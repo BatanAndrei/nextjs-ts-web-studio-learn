@@ -10,6 +10,7 @@
     font-weight: bold;
     color: #f1576b;
     transition: opacity 0.5s;
+    text-decoration: none;
 }
 
 .logo:hover {
@@ -20,6 +21,12 @@
     pointer-events: none;
 }
 
+.home {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .home.disabled {
     pointer-events: none;
 }
@@ -27,3 +34,10 @@
 .decor {
     list-style: none;
 }
+
+.text {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
