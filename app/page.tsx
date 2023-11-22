@@ -1,5 +1,5 @@
 
-export default function Home() {
+export default function Home({unkniwnVar}) {
   return (
     <>
         <h1>Главная</h1>
