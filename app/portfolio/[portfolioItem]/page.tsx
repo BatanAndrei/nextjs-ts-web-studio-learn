@@ -20,7 +20,7 @@ export default async function PortfolioItem( {params: {portfolioItem} }: ItemPro
                 width={400} 
                 height={400} 
                 alt={item.title} />
-            <Link href="/portfolio">Назад к списку работ</Link>
+                <div><Link href="/portfolio">Назад к списку работ</Link></div>
         </div>
     )
 }
