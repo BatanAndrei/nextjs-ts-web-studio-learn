@@ -5,7 +5,7 @@ import { getDetailPortfolio } from '@/app/actions/getDetailPortfolio';
 
 interface ItemProps {
     params: {
-        portfolioItem: number;
+        portfolioItem: PortfolioItem;
     }
     
 }
@@ -13,7 +13,6 @@ interface ItemProps {
 
 export default async function PortfolioItem( {params: {portfolioItem} }: ItemProps) {
     const item = await getDetailPortfolio(portfolioItem);
-    console.log(item)
     
     return (
         <div>
