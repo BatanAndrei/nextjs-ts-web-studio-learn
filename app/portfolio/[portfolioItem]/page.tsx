@@ -7,9 +7,7 @@ interface ItemProps {
     params: {
         portfolioItem: PortfolioItem;
     }
-    
 }
-
 
 export default async function PortfolioItem( {params: {portfolioItem} }: ItemProps) {
     const item = await getDetailPortfolio(portfolioItem);
